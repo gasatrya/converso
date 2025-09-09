@@ -1,11 +1,10 @@
 <?php
 /**
- * Functions for the Powder WordPress theme.
+ * Functions for the Converso WordPress theme.
  *
- * @package	Powder
- * @author	Brian Gardner
+ * @package	Converso
+ * @author	Ga Satrya
  * @license	GNU General Public License v3
- * @link	https://briangardner.com/powder/
  */
 
 /**

@@ -1,14 +1,14 @@
 <?php
 /**
  * Title: Team members in columns view
- * Slug: powder/team-columns
- * Categories: powder-team
+ * Slug: converso/team-columns
+ * Categories: converso-team
  */
 ?>
 <!-- wp:group {"metadata":{"name":"Team Members"},"align":"full","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 	<!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"xx-large"} -->
-	<h1 class="wp-block-heading alignwide has-text-align-center has-xx-large-font-size"><?php echo esc_html__( 'Team Members', 'powder' ); ?></h1>
+	<h1 class="wp-block-heading alignwide has-text-align-center has-xx-large-font-size"><?php echo esc_html__( 'Team Members', 'converso' ); ?></h1>
 	<!-- /wp:heading -->
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|60"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--60)">
@@ -18,10 +18,10 @@
 			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/sample-image-dark.svg'; ?>" alt="Sample image"/></figure>
 			<!-- /wp:image -->
 			<!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
-			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Jennifer Kayne', 'powder' ); ?></h2>
+			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Jennifer Kayne', 'converso' ); ?></h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"x-small"} -->
-			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Executive Officer', 'powder' ); ?></p>
+			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Executive Officer', 'converso' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:social-links {"openInNewTab":true,"size":"has-small-icon-size","align":"center","className":"is-style-outline","style":{"spacing":{"blockGap":{"left":"5px"},"margin":{"top":"15px"}}}} -->
 			<ul class="wp-block-social-links aligncenter has-small-icon-size is-style-outline" style="margin-top:15px">
@@ -39,10 +39,10 @@
 			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/sample-image-dark.svg'; ?>" alt="Sample image"/></figure>
 			<!-- /wp:image -->
 			<!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
-			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Anthony Hawk', 'powder' ); ?></h2>
+			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Anthony Hawk', 'converso' ); ?></h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"x-small"} -->
-			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Operations Officer', 'powder' ); ?></p>
+			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Operations Officer', 'converso' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:social-links {"openInNewTab":true,"size":"has-small-icon-size","align":"center","className":"is-style-outline","style":{"spacing":{"blockGap":{"left":"5px"},"margin":{"top":"15px"}}}} -->
 			<ul class="wp-block-social-links aligncenter has-small-icon-size is-style-outline" style="margin-top:15px">
@@ -60,10 +60,10 @@
 			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/sample-image-dark.svg'; ?>" alt="Sample image"/></figure>
 			<!-- /wp:image -->
 			<!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
-			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Autumn Cole', 'powder' ); ?></h2>
+			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Autumn Cole', 'converso' ); ?></h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"x-small"} -->
-			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Marketing Officer', 'powder' ); ?></p>
+			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Marketing Officer', 'converso' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:social-links {"openInNewTab":true,"size":"has-small-icon-size","align":"center","className":"is-style-outline","style":{"spacing":{"blockGap":{"left":"5px"},"margin":{"top":"15px"}}}} -->
 			<ul class="wp-block-social-links aligncenter has-small-icon-size is-style-outline" style="margin-top:15px">
@@ -81,10 +81,10 @@
 			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/sample-image-dark.svg'; ?>" alt="Sample image"/></figure>
 			<!-- /wp:image -->
 			<!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
-			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Zach Marley', 'powder' ); ?></h2>
+			<h2 class="wp-block-heading has-text-align-center has-medium-font-size"><?php echo esc_html__( 'Zach Marley', 'converso' ); ?></h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"x-small"} -->
-			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Financial Officer', 'powder' ); ?></p>
+			<p class="has-text-align-center has-x-small-font-size" style="margin-top:0"><?php echo esc_html__( 'Chief Financial Officer', 'converso' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:social-links {"openInNewTab":true,"size":"has-small-icon-size","align":"center","className":"is-style-outline","style":{"spacing":{"blockGap":{"left":"5px"},"margin":{"top":"15px"}}}} -->
 			<ul class="wp-block-social-links aligncenter has-small-icon-size is-style-outline" style="margin-top:15px">
@@ -100,3 +100,6 @@
 	<!-- /wp:columns -->
 </div>
 <!-- /wp:group -->
+
+
+

@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: List of posts with columns
- * Slug: powder/posts-list-contrast
- * Categories: powder-posts
+ * Slug: converso/posts-list-contrast
+ * Categories: converso-posts
  * Block Types: core/query
  */
 ?>
@@ -50,3 +50,5 @@
 	<!-- /wp:query -->
 </div>
 <!-- /wp:group -->
+
+

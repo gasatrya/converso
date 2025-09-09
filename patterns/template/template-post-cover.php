@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Post with cover image
- * Slug: powder/template-post-cover
- * Categories: powder-template
+ * Slug: converso/template-post-cover
+ * Categories: converso-template
  * Template Types: single
  */
 ?>
@@ -36,8 +36,8 @@
 				</header>
 				<!-- /wp:group -->
 				<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
-				<!-- wp:pattern {"slug":"powder/post-terms"} /-->
-				<!-- wp:pattern {"slug":"powder/comments"} /-->
+				<!-- wp:pattern {"slug":"converso/post-terms"} /-->
+				<!-- wp:pattern {"slug":"converso/comments"} /-->
 			</div>
 			<!-- /wp:group -->
 		</div>
@@ -47,3 +47,5 @@
 </main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+
+

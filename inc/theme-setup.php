@@ -2,8 +2,8 @@
 /**
  * Initialize theme styles and support.
  */
-if ( ! function_exists( 'powder_setup' ) ) {
-	function powder_setup() {
+if ( ! function_exists( 'converso_setup' ) ) {
+	function converso_setup() {
 
 		// Enqueue editor style sheet.
 		add_editor_style( get_template_directory_uri() . '/style.css' );
@@ -12,4 +12,4 @@ if ( ! function_exists( 'powder_setup' ) ) {
 		remove_theme_support( 'core-block-patterns' );
 	}
 }
-add_action( 'after_setup_theme', 'powder_setup' );
+add_action( 'after_setup_theme', 'converso_setup' );

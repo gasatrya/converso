@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Page with cover image
- * Slug: powder/template-page-cover
- * Categories: powder-template
+ * Slug: converso/template-page-cover
+ * Categories: converso-template
  * Template Types: page
  */
 ?>
@@ -36,3 +36,5 @@
 </main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+
+

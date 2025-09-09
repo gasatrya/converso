@@ -4,84 +4,85 @@
  */
 
 // Define all options at the top (single source of truth).
-$powder_color_options = array(
-	'base'       => 'Base',
-	'contrast'   => 'Contrast'
+$converso_color_options = array(
+	'base' => 'Base',
+	'contrast' => 'Contrast'
 );
 
-$powder_category_options = array(
-	'about'          => 'About',
+$converso_category_options = array(
+	'about' => 'About',
 	'call_to_action' => 'Call to Action',
-	'content'        => 'Content',
-	'faq'            => 'FAQs',
-	'featured'       => 'Featured',
-	'footer'         => 'Footer',
-	'gallery'        => 'Gallery',
-	'header'         => 'Header',
-	'hero'           => 'Hero',
-	'posts'          => 'Posts',
-	'pricing'        => 'Pricing',
-	'team'           => 'Team',
-	'template'       => 'Template',
-	'testimonials'   => 'Testimonials'
+	'content' => 'Content',
+	'faq' => 'FAQs',
+	'featured' => 'Featured',
+	'footer' => 'Footer',
+	'gallery' => 'Gallery',
+	'header' => 'Header',
+	'hero' => 'Hero',
+	'posts' => 'Posts',
+	'pricing' => 'Pricing',
+	'team' => 'Team',
+	'template' => 'Template',
+	'testimonials' => 'Testimonials'
 );
 
 // Option keys (for settings registration)
-$powder_all_options = array_merge(array_keys($powder_color_options), array_keys($powder_category_options));
+$converso_all_options = array_merge( array_keys( $converso_color_options ), array_keys( $converso_category_options ) );
 
 /**
- * Add theme settings as a submenu under Appearance > Powder.
+ * Add theme settings as a submenu under Appearance > Converso.
  */
-add_action( 'admin_menu', function() {
+add_action( 'admin_menu', function () {
 	add_submenu_page(
 		'themes.php',
-		'Powder Settings',
-		'Powder',
+		'Converso Settings',
+		'Converso',
 		'manage_options',
-		'powder',
-		'powder_theme_settings',
+		'converso',
+		'converso_theme_settings',
 		150
 	);
-});
+} );
 
 /**
  * Display content for theme settings.
  */
-function powder_theme_settings() {
-	global $powder_color_options, $powder_category_options;
+function converso_theme_settings() {
+	global $converso_color_options, $converso_category_options;
 
 	if ( ! current_user_can( 'manage_options' ) ) {
 		wp_die( 'You do not have sufficient permissions to access this page.' );
 	}
 	?>
 	<div class="wrap">
-		<h1><?php echo esc_html__( 'Theme Settings', 'powder' ); ?></h1>
+		<h1><?php echo esc_html__( 'Theme Settings', 'converso' ); ?></h1>
 		<p>
-			<?php echo esc_html__( 'Enable these patterns ', 'powder' ); ?>
-			<strong><?php echo esc_html__( 'by color', 'powder' ); ?></strong>
-			<?php echo esc_html__( ' to display in the Block Inserter and Site Editor.', 'powder' ); ?>
+			<?php echo esc_html__( 'Enable these patterns ', 'converso' ); ?>
+			<strong><?php echo esc_html__( 'by color', 'converso' ); ?></strong>
+			<?php echo esc_html__( ' to display in the Block Inserter and Site Editor.', 'converso' ); ?>
 		</p>
 		<form method="post" action="options.php">
-			<?php settings_fields( 'powder-theme-settings-group' ); ?>
-			<?php do_settings_sections( 'powder-theme-settings-group' ); ?>
+			<?php settings_fields( 'converso-theme-settings-group' ); ?>
+			<?php do_settings_sections( 'converso-theme-settings-group' ); ?>
 
 			<!-- COLOR OPTIONS -->
 			<div style="max-width:880px; width:100%;">
 				<table class="form-table" style="width:880px; min-width:880px;">
 					<tr>
 						<?php
-						$color_keys = array_keys( $powder_color_options );
+						$color_keys = array_keys( $converso_color_options );
 						$color_per_row = 4;
 						while ( count( $color_keys ) % $color_per_row !== 0 ) {
 							$color_keys[] = null;
 						}
 						foreach ( $color_keys as $i => $key ) {
-							if ( $i > 0 && $i % $color_per_row === 0 ) echo '</tr><tr>';
+							if ( $i > 0 && $i % $color_per_row === 0 )
+								echo '</tr><tr>';
 							echo '<td style="width:220px; vertical-align:middle;">';
 							if ( $key ) {
 								echo '<label style="font-weight:normal;">';
-								echo '<input type="checkbox" name="powder_setting_option_' . esc_attr( $key ) . '" value="1" ' . checked( 1, get_option( 'powder_setting_option_' . $key, '1' ), false ) . ' style="margin-right:6px;"/>';
-								echo esc_html__( $powder_color_options[ $key ], 'powder' );
+								echo '<input type="checkbox" name="converso_setting_option_' . esc_attr( $key ) . '" value="1" ' . checked( 1, get_option( 'converso_setting_option_' . $key, '1' ), false ) . ' style="margin-right:6px;"/>';
+								echo esc_html__( $converso_color_options[ $key ], 'converso' );
 								echo '</label>';
 							}
 							echo '</td>';
@@ -93,32 +94,34 @@ function powder_theme_settings() {
 
 			<hr style="max-width:880px; margin:16px 0 32px 0; border: none; border-top: 1px solid #ccd0d4;">
 			<p style="max-width:880px;">
-				<?php echo esc_html__( 'Enable these patterns ', 'powder' ); ?>
-				<strong><?php echo esc_html__( 'by category', 'powder' ); ?></strong>
-				<?php echo esc_html__( ' to display in the Block Inserter and Site Editor.', 'powder' ); ?>
+				<?php echo esc_html__( 'Enable these patterns ', 'converso' ); ?>
+				<strong><?php echo esc_html__( 'by category', 'converso' ); ?></strong>
+				<?php echo esc_html__( ' to display in the Block Inserter and Site Editor.', 'converso' ); ?>
 			</p>
 
 			<!-- CATEGORY OPTIONS -->
 			<div style="max-width:880px; width:100%;">
 				<table class="form-table" style="width:880px; min-width:880px;">
 					<?php
-					$category_keys = array_keys( $powder_category_options );
+					$category_keys = array_keys( $converso_category_options );
 					$category_per_row = 4;
 					while ( count( $category_keys ) % $category_per_row !== 0 ) {
 						$category_keys[] = null;
 					}
 					for ( $i = 0; $i < count( $category_keys ); $i++ ) {
-						if ( $i % $category_per_row === 0 ) echo '<tr valign="top">';
+						if ( $i % $category_per_row === 0 )
+							echo '<tr valign="top">';
 						echo '<td style="width:220px; vertical-align:middle;">';
 						$key = $category_keys[ $i ];
 						if ( $key ) {
 							echo '<label style="font-weight:normal;">';
-							echo '<input type="checkbox" name="powder_setting_option_' . esc_attr( $key ) . '" value="1" ' . checked( 1, get_option( 'powder_setting_option_' . $key, '1' ), false ) . ' style="margin-right:6px;"/>';
-							echo esc_html__( $powder_category_options[ $key ], 'powder' );
+							echo '<input type="checkbox" name="converso_setting_option_' . esc_attr( $key ) . '" value="1" ' . checked( 1, get_option( 'converso_setting_option_' . $key, '1' ), false ) . ' style="margin-right:6px;"/>';
+							echo esc_html__( $converso_category_options[ $key ], 'converso' );
 							echo '</label>';
 						}
 						echo '</td>';
-						if ( ( $i + 1 ) % $category_per_row === 0 ) echo '</tr>';
+						if ( ( $i + 1 ) % $category_per_row === 0 )
+							echo '</tr>';
 					}
 					?>
 				</table>
@@ -132,255 +135,255 @@ function powder_theme_settings() {
 /**
  * Register settings with sanitization.
  */
-add_action( 'admin_init', function() use ( $powder_all_options ) {
-	foreach ( $powder_all_options as $option ) {
-		register_setting( 'powder-theme-settings-group', 'powder_setting_option_' . $option, 'sanitize_powder_theme_option' );
+add_action( 'admin_init', function () use ($converso_all_options) {
+	foreach ( $converso_all_options as $option ) {
+		register_setting( 'converso-theme-settings-group', 'converso_setting_option_' . $option, 'sanitize_converso_theme_option' );
 	}
-});
+} );
 
 /**
  * Sanitize callback function.
  */
-function sanitize_powder_theme_option( $input ) {
+function sanitize_converso_theme_option( $input ) {
 	return $input === '1' ? '1' : '0';
 }
 
 /**
  * Unregister patterns based on settings.
  */
-add_action( 'init', function() {
-	$patterns = [
-		'powder_setting_option_base' => [
-			'powder/about-half',
-			'powder/about-split',
-			'powder/call-to-action-button',
-			'powder/call-to-action-centered',
-			'powder/call-to-action-outline',
-			'powder/call-to-action-promo',
-			'powder/call-to-action-stacked',
-			'powder/content-links',
-			'powder/content-logos',
-			'powder/content-social-numbers',
-			'powder/faq-columns',
-			'powder/faq-stacked',
-			'powder/featured-columns',
-			'powder/featured-content-boxes',
-			'powder/featured-intro-columns',
-			'powder/footer-mega',
-			'powder/footer-multi-column',
-			'powder/footer-split',
-			'powder/footer-stacked',
-			'powder/gallery-grid-multi',
-			'powder/gallery-grid-square',
-			'powder/gallery-mosaic',
-			'powder/gallery-row',
-			'powder/gallery-text-images',
-			'powder/header-logo-button',
-			'powder/header-logo-social',
-			'powder/header-site-logo',
-			'powder/header-title-separator',
-			'powder/hero-basic-text-button',
-			'powder/hero-columns-image-text',
-			'powder/hero-columns-text-image',
-			'powder/hero-cover-stack',
-			'powder/hero-image-text-buttons',
-			'powder/hero-stacked-text-image',
-			'powder/posts-grid',
-			'powder/posts-list',
-			'powder/pricing-2-columns',
-			'powder/pricing-3-columns',
-			'powder/team-columns',
-			'powder/team-single-image-text',
-			'powder/team-single-text-image',
-			'powder/template-page-cover',
-			'powder/template-page-featured',
-			'powder/template-page-sidebar',
-			'powder/template-post-cover',
-			'powder/template-post-featured',
-			'powder/template-post-sidebar',
-			'powder/testimonials-bold',
-			'powder/testimonials-columns',
-			'powder/testimonials-grid',
-			'powder/testimonials-single'
+add_action( 'init', function () {
+	$patterns = [ 
+		'converso_setting_option_base' => [ 
+			'converso/about-half',
+			'converso/about-split',
+			'converso/call-to-action-button',
+			'converso/call-to-action-centered',
+			'converso/call-to-action-outline',
+			'converso/call-to-action-promo',
+			'converso/call-to-action-stacked',
+			'converso/content-links',
+			'converso/content-logos',
+			'converso/content-social-numbers',
+			'converso/faq-columns',
+			'converso/faq-stacked',
+			'converso/featured-columns',
+			'converso/featured-content-boxes',
+			'converso/featured-intro-columns',
+			'converso/footer-mega',
+			'converso/footer-multi-column',
+			'converso/footer-split',
+			'converso/footer-stacked',
+			'converso/gallery-grid-multi',
+			'converso/gallery-grid-square',
+			'converso/gallery-mosaic',
+			'converso/gallery-row',
+			'converso/gallery-text-images',
+			'converso/header-logo-button',
+			'converso/header-logo-social',
+			'converso/header-site-logo',
+			'converso/header-title-separator',
+			'converso/hero-basic-text-button',
+			'converso/hero-columns-image-text',
+			'converso/hero-columns-text-image',
+			'converso/hero-cover-stack',
+			'converso/hero-image-text-buttons',
+			'converso/hero-stacked-text-image',
+			'converso/posts-grid',
+			'converso/posts-list',
+			'converso/pricing-2-columns',
+			'converso/pricing-3-columns',
+			'converso/team-columns',
+			'converso/team-single-image-text',
+			'converso/team-single-text-image',
+			'converso/template-page-cover',
+			'converso/template-page-featured',
+			'converso/template-page-sidebar',
+			'converso/template-post-cover',
+			'converso/template-post-featured',
+			'converso/template-post-sidebar',
+			'converso/testimonials-bold',
+			'converso/testimonials-columns',
+			'converso/testimonials-grid',
+			'converso/testimonials-single'
 		],
-		'powder_setting_option_contrast' => [
-			'powder/about-half-contrast',
-			'powder/about-split-contrast',
-			'powder/call-to-action-button-contrast',
-			'powder/call-to-action-centered-contrast',
-			'powder/call-to-action-outline-contrast',
-			'powder/call-to-action-promo-contrast',
-			'powder/call-to-action-stacked-contrast',
-			'powder/content-links-contrast',
-			'powder/content-logos-contrast',
-			'powder/content-social-numbers-contrast',
-			'powder/faq-columns-contrast',
-			'powder/faq-stacked-contrast',
-			'powder/featured-columns-contrast',
-			'powder/featured-content-boxes-contrast',
-			'powder/featured-intro-columns-contrast',
-			'powder/footer-contrast',
-			'powder/footer-mega-contrast',
-			'powder/footer-multi-column-contrast',
-			'powder/footer-split-contrast',
-			'powder/footer-stacked-contrast',
-			'powder/gallery-grid-multi-contrast',
-			'powder/gallery-grid-square-contrast',
-			'powder/gallery-mosaic-contrast',
-			'powder/gallery-row-contrast',
-			'powder/gallery-text-images-contrast',
-			'powder/header-contrast',
-			'powder/header-logo-button-contrast',
-			'powder/header-logo-social-contrast',
-			'powder/header-site-logo-contrast',
-			'powder/header-title-separator-contrast',
-			'powder/hero-basic-text-button-contrast',
-			'powder/hero-columns-image-text-contrast',
-			'powder/hero-columns-text-image-contrast',
-			'powder/hero-cover-stack-contrast',
-			'powder/hero-image-text-buttons-contrast',
-			'powder/hero-stacked-text-image-contrast',
-			'powder/posts-contrast',
-			'powder/posts-grid-contrast',
-			'powder/posts-list-contrast',
-			'powder/pricing-2-columns-contrast',
-			'powder/pricing-3-columns-contrast',
-			'powder/team-columns-contrast',
-			'powder/team-single-image-text-contrast',
-			'powder/team-single-text-image-contrast',
-			'powder/testimonials-bold-contrast',
-			'powder/testimonials-columns-contrast',
-			'powder/testimonials-grid-contrast',
-			'powder/testimonials-single-contrast'
+		'converso_setting_option_contrast' => [ 
+			'converso/about-half-contrast',
+			'converso/about-split-contrast',
+			'converso/call-to-action-button-contrast',
+			'converso/call-to-action-centered-contrast',
+			'converso/call-to-action-outline-contrast',
+			'converso/call-to-action-promo-contrast',
+			'converso/call-to-action-stacked-contrast',
+			'converso/content-links-contrast',
+			'converso/content-logos-contrast',
+			'converso/content-social-numbers-contrast',
+			'converso/faq-columns-contrast',
+			'converso/faq-stacked-contrast',
+			'converso/featured-columns-contrast',
+			'converso/featured-content-boxes-contrast',
+			'converso/featured-intro-columns-contrast',
+			'converso/footer-contrast',
+			'converso/footer-mega-contrast',
+			'converso/footer-multi-column-contrast',
+			'converso/footer-split-contrast',
+			'converso/footer-stacked-contrast',
+			'converso/gallery-grid-multi-contrast',
+			'converso/gallery-grid-square-contrast',
+			'converso/gallery-mosaic-contrast',
+			'converso/gallery-row-contrast',
+			'converso/gallery-text-images-contrast',
+			'converso/header-contrast',
+			'converso/header-logo-button-contrast',
+			'converso/header-logo-social-contrast',
+			'converso/header-site-logo-contrast',
+			'converso/header-title-separator-contrast',
+			'converso/hero-basic-text-button-contrast',
+			'converso/hero-columns-image-text-contrast',
+			'converso/hero-columns-text-image-contrast',
+			'converso/hero-cover-stack-contrast',
+			'converso/hero-image-text-buttons-contrast',
+			'converso/hero-stacked-text-image-contrast',
+			'converso/posts-contrast',
+			'converso/posts-grid-contrast',
+			'converso/posts-list-contrast',
+			'converso/pricing-2-columns-contrast',
+			'converso/pricing-3-columns-contrast',
+			'converso/team-columns-contrast',
+			'converso/team-single-image-text-contrast',
+			'converso/team-single-text-image-contrast',
+			'converso/testimonials-bold-contrast',
+			'converso/testimonials-columns-contrast',
+			'converso/testimonials-grid-contrast',
+			'converso/testimonials-single-contrast'
 		],
-		'powder_setting_option_about' => [
-			'powder/about-half-contrast',
-			'powder/about-half',
-			'powder/about-split-contrast',
-			'powder/about-split'
+		'converso_setting_option_about' => [ 
+			'converso/about-half-contrast',
+			'converso/about-half',
+			'converso/about-split-contrast',
+			'converso/about-split'
 		],
-		'powder_setting_option_call_to_action' => [
-			'powder/call-to-action-button-contrast',
-			'powder/call-to-action-button',
-			'powder/call-to-action-centered-contrast',
-			'powder/call-to-action-centered',
-			'powder/call-to-action-outline-contrast',
-			'powder/call-to-action-outline',
-			'powder/call-to-action-promo-contrast',
-			'powder/call-to-action-promo',
-			'powder/call-to-action-stacked-contrast',
-			'powder/call-to-action-stacked'
+		'converso_setting_option_call_to_action' => [ 
+			'converso/call-to-action-button-contrast',
+			'converso/call-to-action-button',
+			'converso/call-to-action-centered-contrast',
+			'converso/call-to-action-centered',
+			'converso/call-to-action-outline-contrast',
+			'converso/call-to-action-outline',
+			'converso/call-to-action-promo-contrast',
+			'converso/call-to-action-promo',
+			'converso/call-to-action-stacked-contrast',
+			'converso/call-to-action-stacked'
 		],
-		'powder_setting_option_content' => [
-			'powder/content-links-contrast',
-			'powder/content-links',
-			'powder/content-logos-contrast',
-			'powder/content-logos',
-			'powder/content-social-numbers-contrast',
-			'powder/content-social-numbers'
+		'converso_setting_option_content' => [ 
+			'converso/content-links-contrast',
+			'converso/content-links',
+			'converso/content-logos-contrast',
+			'converso/content-logos',
+			'converso/content-social-numbers-contrast',
+			'converso/content-social-numbers'
 		],
-		'powder_setting_option_faq' => [
-			'powder/faq-columns-contrast',
-			'powder/faq-columns',
-			'powder/faq-stacked-contrast',
-			'powder/faq-stacked'
+		'converso_setting_option_faq' => [ 
+			'converso/faq-columns-contrast',
+			'converso/faq-columns',
+			'converso/faq-stacked-contrast',
+			'converso/faq-stacked'
 		],
-		'powder_setting_option_featured' => [
-			'powder/featured-columns-contrast',
-			'powder/featured-columns',
-			'powder/featured-content-boxes-contrast',
-			'powder/featured-content-boxes',
-			'powder/featured-intro-columns-contrast',
-			'powder/featured-intro-columns'
+		'converso_setting_option_featured' => [ 
+			'converso/featured-columns-contrast',
+			'converso/featured-columns',
+			'converso/featured-content-boxes-contrast',
+			'converso/featured-content-boxes',
+			'converso/featured-intro-columns-contrast',
+			'converso/featured-intro-columns'
 		],
-		'powder_setting_option_footer' => [
-			'powder/footer-contrast',
-			'powder/footer-mega-contrast',
-			'powder/footer-mega',
-			'powder/footer-multi-column-contrast',
-			'powder/footer-multi-column',
-			'powder/footer-split-contrast',
-			'powder/footer-split',
-			'powder/footer-stacked-contrast',
-			'powder/footer-stacked'
+		'converso_setting_option_footer' => [ 
+			'converso/footer-contrast',
+			'converso/footer-mega-contrast',
+			'converso/footer-mega',
+			'converso/footer-multi-column-contrast',
+			'converso/footer-multi-column',
+			'converso/footer-split-contrast',
+			'converso/footer-split',
+			'converso/footer-stacked-contrast',
+			'converso/footer-stacked'
 		],
-		'powder_setting_option_gallery' => [
-			'powder/gallery-grid-multi-contrast',
-			'powder/gallery-grid-multi',
-			'powder/gallery-grid-square-contrast',
-			'powder/gallery-grid-square',
-			'powder/gallery-mosaic-contrast',
-			'powder/gallery-mosaic',
-			'powder/gallery-row-contrast',
-			'powder/gallery-row',
-			'powder/gallery-text-images-contrast',
-			'powder/gallery-text-images'
+		'converso_setting_option_gallery' => [ 
+			'converso/gallery-grid-multi-contrast',
+			'converso/gallery-grid-multi',
+			'converso/gallery-grid-square-contrast',
+			'converso/gallery-grid-square',
+			'converso/gallery-mosaic-contrast',
+			'converso/gallery-mosaic',
+			'converso/gallery-row-contrast',
+			'converso/gallery-row',
+			'converso/gallery-text-images-contrast',
+			'converso/gallery-text-images'
 		],
-		'powder_setting_option_header' => [
-			'powder/header-contrast',
-			'powder/header-logo-button-contrast',
-			'powder/header-logo-button',
-			'powder/header-logo-social-contrast',
-			'powder/header-logo-social',
-			'powder/header-site-logo-contrast',
-			'powder/header-site-logo',
-			'powder/header-title-separator-contrast',
-			'powder/header-title-separator'
+		'converso_setting_option_header' => [ 
+			'converso/header-contrast',
+			'converso/header-logo-button-contrast',
+			'converso/header-logo-button',
+			'converso/header-logo-social-contrast',
+			'converso/header-logo-social',
+			'converso/header-site-logo-contrast',
+			'converso/header-site-logo',
+			'converso/header-title-separator-contrast',
+			'converso/header-title-separator'
 		],
-		'powder_setting_option_hero' => [
-			'powder/hero-basic-text-button-contrast',
-			'powder/hero-basic-text-button',
-			'powder/hero-columns-image-text-contrast',
-			'powder/hero-columns-image-text',
-			'powder/hero-columns-text-image-contrast',
-			'powder/hero-columns-text-image',
-			'powder/hero-cover-stack-contrast',
-			'powder/hero-cover-stack',
-			'powder/hero-image-text-buttons-contrast',
-			'powder/hero-image-text-buttons',
-			'powder/hero-stacked-text-image-contrast',
-			'powder/hero-stacked-text-image'
+		'converso_setting_option_hero' => [ 
+			'converso/hero-basic-text-button-contrast',
+			'converso/hero-basic-text-button',
+			'converso/hero-columns-image-text-contrast',
+			'converso/hero-columns-image-text',
+			'converso/hero-columns-text-image-contrast',
+			'converso/hero-columns-text-image',
+			'converso/hero-cover-stack-contrast',
+			'converso/hero-cover-stack',
+			'converso/hero-image-text-buttons-contrast',
+			'converso/hero-image-text-buttons',
+			'converso/hero-stacked-text-image-contrast',
+			'converso/hero-stacked-text-image'
 		],
-		'powder_setting_option_posts' => [
-			'powder/posts-contrast',
-			'powder/posts-grid-contrast',
-			'powder/posts-grid',
-			'powder/posts-list-contrast',
-			'powder/posts-list'
+		'converso_setting_option_posts' => [ 
+			'converso/posts-contrast',
+			'converso/posts-grid-contrast',
+			'converso/posts-grid',
+			'converso/posts-list-contrast',
+			'converso/posts-list'
 		],
-		'powder_setting_option_pricing' => [
-			'powder/pricing-2-columns-contrast',
-			'powder/pricing-2-columns',
-			'powder/pricing-3-columns-contrast',
-			'powder/pricing-3-columns'
+		'converso_setting_option_pricing' => [ 
+			'converso/pricing-2-columns-contrast',
+			'converso/pricing-2-columns',
+			'converso/pricing-3-columns-contrast',
+			'converso/pricing-3-columns'
 		],
-		'powder_setting_option_team' => [
-			'powder/team-columns-contrast',
-			'powder/team-columns',
-			'powder/team-single-image-text-contrast',
-			'powder/team-single-image-text',
-			'powder/team-single-text-image-contrast',
-			'powder/team-single-text-image'
+		'converso_setting_option_team' => [ 
+			'converso/team-columns-contrast',
+			'converso/team-columns',
+			'converso/team-single-image-text-contrast',
+			'converso/team-single-image-text',
+			'converso/team-single-text-image-contrast',
+			'converso/team-single-text-image'
 		],
-		'powder_setting_option_template' => [
-			'powder/template-page-cover',
-			'powder/template-page-featured',
-			'powder/template-page-sidebar-left',
-			'powder/template-page-sidebar-right',
-			'powder/template-post-cover',
-			'powder/template-post-featured',
-			'powder/template-post-sidebar-left',
-			'powder/template-post-sidebar-right'
+		'converso_setting_option_template' => [ 
+			'converso/template-page-cover',
+			'converso/template-page-featured',
+			'converso/template-page-sidebar-left',
+			'converso/template-page-sidebar-right',
+			'converso/template-post-cover',
+			'converso/template-post-featured',
+			'converso/template-post-sidebar-left',
+			'converso/template-post-sidebar-right'
 		],
-		'powder_setting_option_testimonials' => [
-			'powder/testimonials-bold-contrast',
-			'powder/testimonials-bold',
-			'powder/testimonials-columns-contrast',
-			'powder/testimonials-columns',
-			'powder/testimonials-grid-contrast',
-			'powder/testimonials-grid',
-			'powder/testimonials-single-contrast',
-			'powder/testimonials-single'
+		'converso_setting_option_testimonials' => [ 
+			'converso/testimonials-bold-contrast',
+			'converso/testimonials-bold',
+			'converso/testimonials-columns-contrast',
+			'converso/testimonials-columns',
+			'converso/testimonials-grid-contrast',
+			'converso/testimonials-grid',
+			'converso/testimonials-single-contrast',
+			'converso/testimonials-single'
 		]
 	];
 
@@ -391,4 +394,4 @@ add_action( 'init', function() {
 			}
 		}
 	}
-});
+} );

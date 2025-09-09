@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Page with sidebar (right)
- * Slug: powder/template-page-sidebar-right
- * Categories: powder-template
+ * Slug: converso/template-page-sidebar-right
+ * Categories: converso-template
  * Template Types: page
  */
 ?>
@@ -35,3 +35,5 @@
 </main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+
+

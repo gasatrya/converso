@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Post with sidebar (left)
- * Slug: powder/template-post-sidebar-left
- * Categories: powder-template
+ * Slug: converso/template-post-sidebar-left
+ * Categories: converso-template
  * Template Types: single
  */
 ?>
@@ -26,8 +26,8 @@
 			<article class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40)">
 				<!-- wp:post-title {"level":1} /-->
 				<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
-				<!-- wp:pattern {"slug":"powder/post-terms"} /-->
-				<!-- wp:pattern {"slug":"powder/comments"} /-->
+				<!-- wp:pattern {"slug":"converso/post-terms"} /-->
+				<!-- wp:pattern {"slug":"converso/comments"} /-->
 			</article>
 			<!-- /wp:group -->
 		</div>
@@ -37,3 +37,5 @@
 </main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+
+

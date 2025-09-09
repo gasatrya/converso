@@ -2,26 +2,26 @@
 /**
  * Register block styles.
  */
-function powder_register_block_styles() {
+function converso_register_block_styles() {
 	$block_styles = array(
 		'core/button' => array(
-			'light' => __( 'Light', 'powder' ),
-			'shadow' => __( 'Shadow', 'powder' ),
+			'light' => __( 'Light', 'converso' ),
+			'shadow' => __( 'Shadow', 'converso' ),
 		),
 		'core/columns' => array(
-			'column-reverse' => __( 'Reverse', 'powder' ),
+			'column-reverse' => __( 'Reverse', 'converso' ),
 		),
 		'core/cover' => array(
-			'gradient' => __( 'Gradient', 'powder' ),
+			'gradient' => __( 'Gradient', 'converso' ),
 		),
 		'core/heading' => array(
-			'balanced' => __( 'Balanced', 'powder' ),
+			'balanced' => __( 'Balanced', 'converso' ),
 		),
 		'core/list' => array(
-			'no-style' => __( 'No Style', 'powder' ),
+			'no-style' => __( 'No Style', 'converso' ),
 		),
 		'core/social-links' => array(
-			'outline' => __( 'Outline', 'powder' ),
+			'outline' => __( 'Outline', 'converso' ),
 		),
 	);
 	foreach ( $block_styles as $block => $styles ) {
@@ -29,11 +29,11 @@ function powder_register_block_styles() {
 			register_block_style(
 				$block,
 				array(
-					'name'  => $style_name,
+					'name' => $style_name,
 					'label' => $style_label,
 				)
 			);
 		}
 	}
 }
-add_action( 'init', 'powder_register_block_styles' );
+add_action( 'init', 'converso_register_block_styles' );

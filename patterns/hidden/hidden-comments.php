@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Comments
- * Slug: powder/comments
+ * Slug: converso/comments
  * Inserter: no
  */
 ?>
@@ -12,7 +12,7 @@
 		<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}}} -->
 		<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--60)">
 			<!-- wp:heading -->
-			<h2><?php echo esc_html__( 'Comments', 'powder' ); ?></h2>
+			<h2><?php echo esc_html__( 'Comments', 'converso' ); ?></h2>
 			<!-- /wp:heading -->
 			<!-- wp:comments-title {"level":3} /-->
 			<!-- wp:comment-template -->
@@ -51,3 +51,5 @@
 	<!-- /wp:comments -->
 </section>
 <!-- /wp:group -->
+
+

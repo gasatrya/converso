@@ -2,12 +2,12 @@
 /**
  * Register pattern category.
  */
-function powder_register_pattern_category( $slug, $label, $description ) {
+function converso_register_pattern_category( $slug, $label, $description ) {
 	register_block_pattern_category(
-		'powder-' . $slug,
+		'converso-' . $slug,
 		array(
-			'label'       => __( $label, 'powder' ),
-			'description' => __( $description, 'powder' ),
+			'label' => __( $label, 'converso' ),
+			'description' => __( $description, 'converso' ),
 		)
 	);
 }
@@ -15,26 +15,26 @@ function powder_register_pattern_category( $slug, $label, $description ) {
 /**
  * Register pattern categories.
  */
-function powder_register_pattern_categories() {
+function converso_register_pattern_categories() {
 	$categories = array(
-		'about'          => array( __( 'About', 'powder' ), __( 'A collection of about patterns for Powder.', 'powder' ) ),
-		'call-to-action' => array( __( 'Call to Action', 'powder' ), __( 'A collection of call to action patterns for Powder.', 'powder' ) ),
-		'content'        => array( __( 'Content', 'powder' ), __( 'A collection of content patterns for Powder.', 'powder' ) ),
-		'faq'            => array( __( 'FAQs', 'powder' ), __( 'A collection of FAQ patterns for Powder.', 'powder' ) ),
-		'featured'       => array( __( 'Featured', 'powder' ), __( 'A collection of featured patterns for Powder.', 'powder' ) ),
-		'footer'         => array( __( 'Footer', 'powder' ), __( 'A collection of footer patterns for Powder.', 'powder' ) ),
-		'gallery'        => array( __( 'Gallery', 'powder' ), __( 'A collection of gallery patterns for Powder.', 'powder' ) ),
-		'header'         => array( __( 'Header', 'powder' ), __( 'A collection of header patterns for Powder.', 'powder' ) ),
-		'hero'           => array( __( 'Hero', 'powder' ), __( 'A collection of hero patterns for Powder.', 'powder' ) ),
-		'posts'          => array( __( 'Posts', 'powder' ), __( 'A collection of posts patterns for Powder.', 'powder' ) ),
-		'pricing'        => array( __( 'Pricing', 'powder' ), __( 'A collection of pricing patterns for Powder.', 'powder' ) ),
-		'team'           => array( __( 'Team', 'powder' ), __( 'A collection of team patterns for Powder.', 'powder' ) ),
-		'template'       => array( __( 'Template', 'powder' ), __( 'A collection of template patterns for Powder.', 'powder' ) ),
-		'testimonials'   => array( __( 'Testimonials', 'powder' ), __( 'A collection of testimonials patterns for Powder.', 'powder' ) ),
+		'about' => array( __( 'About', 'converso' ), __( 'A collection of about patterns for Converso.', 'converso' ) ),
+		'call-to-action' => array( __( 'Call to Action', 'converso' ), __( 'A collection of call to action patterns for Converso.', 'converso' ) ),
+		'content' => array( __( 'Content', 'converso' ), __( 'A collection of content patterns for Converso.', 'converso' ) ),
+		'faq' => array( __( 'FAQs', 'converso' ), __( 'A collection of FAQ patterns for Converso.', 'converso' ) ),
+		'featured' => array( __( 'Featured', 'converso' ), __( 'A collection of featured patterns for Converso.', 'converso' ) ),
+		'footer' => array( __( 'Footer', 'converso' ), __( 'A collection of footer patterns for Converso.', 'converso' ) ),
+		'gallery' => array( __( 'Gallery', 'converso' ), __( 'A collection of gallery patterns for Converso.', 'converso' ) ),
+		'header' => array( __( 'Header', 'converso' ), __( 'A collection of header patterns for Converso.', 'converso' ) ),
+		'hero' => array( __( 'Hero', 'converso' ), __( 'A collection of hero patterns for Converso.', 'converso' ) ),
+		'posts' => array( __( 'Posts', 'converso' ), __( 'A collection of posts patterns for Converso.', 'converso' ) ),
+		'pricing' => array( __( 'Pricing', 'converso' ), __( 'A collection of pricing patterns for Converso.', 'converso' ) ),
+		'team' => array( __( 'Team', 'converso' ), __( 'A collection of team patterns for Converso.', 'converso' ) ),
+		'template' => array( __( 'Template', 'converso' ), __( 'A collection of template patterns for Converso.', 'converso' ) ),
+		'testimonials' => array( __( 'Testimonials', 'converso' ), __( 'A collection of testimonials patterns for Converso.', 'converso' ) ),
 	);
 
 	foreach ( $categories as $slug => $details ) {
-		powder_register_pattern_category( $slug, $details[0], $details[1] );
+		converso_register_pattern_category( $slug, $details[0], $details[1] );
 	}
 }
-add_action( 'init', 'powder_register_pattern_categories' );
+add_action( 'init', 'converso_register_pattern_categories' );

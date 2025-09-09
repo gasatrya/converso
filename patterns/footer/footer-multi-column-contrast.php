@@ -1,17 +1,20 @@
 <?php
 /**
  * Title: Footer - multi-column
- * Slug: powder/footer-multi-column-contrast
- * Categories: powder-footer
+ * Slug: converso/footer-multi-column-contrast
+ * Categories: converso-footer
  * Block Types: core/template-part/footer
  */
 ?>
 <!-- wp:group {"metadata":{"name":"Footer"},"align":"full","style":{"spacing":{"margin":{"top":"0px"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"contrast","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-base-color has-contrast-background-color has-text-color has-background has-link-color" style="margin-top:0px;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<div class="wp-block-group alignfull has-base-color has-contrast-background-color has-text-color has-background has-link-color"
+	style="margin-top:0px;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0","padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained","wideSize":"600px","justifyContent":"left"}} -->
 	<div class="wp-block-group alignwide" style="padding-right:0;padding-left:0">
 		<!-- wp:heading {"style":{"typography":{"fontSize":"48px"}}} -->
-		<h2 class="wp-block-heading" style="font-size:48px"><?php echo esc_html__( 'Designed with love. Powered by WordPress.', 'powder' ); ?></h2>
+		<h2 class="wp-block-heading" style="font-size:48px">
+			<?php echo esc_html__( 'Designed with love. Powered by WordPress.', 'converso' ); ?>
+		</h2>
 		<!-- /wp:heading -->
 	</div>
 	<!-- /wp:group -->
@@ -20,7 +23,9 @@
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
 			<!-- wp:heading {"level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"x-small"} -->
-			<h3 class="wp-block-heading has-x-small-font-size" style="text-transform:uppercase"><?php echo esc_html__( 'Main Office', 'powder' ); ?></h3>
+			<h3 class="wp-block-heading has-x-small-font-size" style="text-transform:uppercase">
+				<?php echo esc_html__( 'Main Office', 'converso' ); ?>
+			</h3>
 			<!-- /wp:heading -->
 			<!-- wp:list {"style":{"typography":{"lineHeight":"1.5"}},"className":"is-style-no-style","fontSize":"small"} -->
 			<ul style="line-height:1.5" class="is-style-no-style has-small-font-size">
@@ -52,7 +57,7 @@
 						<li>Brooke Swift</li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php echo esc_html__( 'Creative Director', 'powder' ); ?></li>
+						<li><?php echo esc_html__( 'Creative Director', 'converso' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
 						<li><a href="mailto:brooke@example.com">brooke@example.com</a></li>
@@ -72,7 +77,7 @@
 						<li>Sarah Taylor</li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php echo esc_html__( 'Creative Director', 'powder' ); ?></li>
+						<li><?php echo esc_html__( 'Creative Director', 'converso' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
 						<li><a href="mailto:sarah@example.com">sarah@example.com</a></li>
@@ -92,7 +97,7 @@
 						<li>Hayley Jones</li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
-						<li><?php echo esc_html__( 'Creative Director', 'powder' ); ?></li>
+						<li><?php echo esc_html__( 'Creative Director', 'converso' ); ?></li>
 						<!-- /wp:list-item -->
 						<!-- wp:list-item -->
 						<li><a href="mailto:hayley@example.com">hayley@example.com</a></li>
@@ -123,7 +128,9 @@
 			<p> · </p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
-			<p><a href="https://briangardner.com/powder/">Powder Theme</a> by <a href="https://briangardner.com/">Brian Gardner</a></p>
+			<p><a href="https://briangardner.com/converso/">Converso Theme</a> by <a
+					href="https://briangardner.com/">Brian
+					Gardner</a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

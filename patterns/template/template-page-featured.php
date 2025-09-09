@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Page with featured image
- * Slug: powder/template-page-featured
- * Categories: powder-template
+ * Slug: converso/template-page-featured
+ * Categories: converso-template
  * Template Types: page
  */
 ?>
@@ -41,3 +41,5 @@
 </main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+
+

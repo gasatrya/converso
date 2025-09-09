@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Post meta
- * Slug: powder/post-meta
+ * Slug: converso/post-meta
  * Inserter: no
  */
 ?>
@@ -14,3 +14,4 @@
 	<!-- wp:post-author-name {"isLink":true} /-->
 </div>
 <!-- /wp:group -->
+

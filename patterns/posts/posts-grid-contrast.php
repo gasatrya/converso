@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Grid of posts
- * Slug: powder/posts-grid-contrast
- * Categories: powder-posts
+ * Slug: converso/posts-grid-contrast
+ * Categories: converso-posts
  * Block Types: core/query
  */
 ?>
@@ -19,7 +19,7 @@
 					<!-- wp:group {"tagName":"header","style":{"spacing":{"blockGap":"10px"}},"className":"entry-header","layout":{"type":"default"}} -->
 					<header class="wp-block-group entry-header">
 						<!-- wp:post-title {"isLink":true,"fontSize":"large"} /-->
-						<!-- wp:pattern {"slug":"powder/post-meta"} /-->
+						<!-- wp:pattern {"slug":"converso/post-meta"} /-->
 					</header>
 					<!-- /wp:group -->
 					<!-- wp:post-excerpt {"moreText":"Read More →","excerptLength":20,"style":{"spacing":{"margin":{"top":"var:preset|spacing|20"}}},"fontSize":"small"} /-->
@@ -40,3 +40,5 @@
 	<!-- /wp:query -->
 </div>
 <!-- /wp:group -->
+
+
