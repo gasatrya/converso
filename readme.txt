@@ -1,9 +1,9 @@
 === Converso ===
-Contributors: bgardner
+Contributors: gasatrya
 Requires at least: 6.8
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.6.5
+Stable tag: 1.0.0
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,7 +18,7 @@ Join the community: https://www.reddit.com/r/ConversoTheme/
 
 == Copyright ==
 
-Converso WordPress theme, (C) 2006-2025 Brian Gardner.
+Converso WordPress theme, (C) 2006-2025 Ga Satrya.
 Converso is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -30,6 +30,10 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+---
+
+Credits: This theme is part of the Converso package, created by Brian Gardner and released under the GNU General Public License v3. For more information, visit https://www.ctaflow.com/converso/
 
 == Font ==
 

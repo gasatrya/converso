@@ -3,7 +3,7 @@
  * Check for theme updates.
  */
 function converso_theme_updates( $transient ) {
-	$update_url = 'https://briangardner.com/converso-updates.json';
+	$update_url = 'https://www.ctaflow.com/converso-updates.json';
 
 	$response = wp_remote_get( $update_url );
 	if ( is_wp_error( $response ) ) {
@@ -22,7 +22,7 @@ function converso_theme_updates( $transient ) {
 		$transient->response['converso'] = array(
 			'theme' => 'converso',
 			'new_version' => $data->version,
-			'url' => 'https://briangardner.com/converso/changelog/',
+			'url' => 'https://www.ctaflow.com/converso/changelog/',
 			'package' => $data->download_url,
 		);
 	}

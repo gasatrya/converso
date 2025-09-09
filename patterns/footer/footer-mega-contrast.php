@@ -12,8 +12,7 @@
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"10px","padding":{"bottom":"var(--wp--preset--spacing--60)"}}}} -->
 	<div class="wp-block-group alignwide" style="padding-bottom:var(--wp--preset--spacing--60)">
 		<!-- wp:image {"align":"center","width":40,"height":40,"sizeSlug":"full","linkDestination":"custom"} -->
-		<figure class="wp-block-image aligncenter size-full is-resized"><a
-				href="https://briangardner.com/converso/"><img
+		<figure class="wp-block-image aligncenter size-full is-resized"><a href="https://www.ctaflow.com/converso/"><img
 					src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/site-logo-light.svg'; ?>"
 					alt="Converso site logo" width="40" height="40" /></a></figure>
 		<!-- /wp:image -->
@@ -90,8 +89,8 @@
 			<p> · </p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph -->
-			<p><a href="https://briangardner.com/converso/">Converso Theme</a> by <a
-					href="https://briangardner.com/">Brian
+			<p><a href="https://www.ctaflow.com/converso/">Converso Theme</a> by <a
+					href="https://www.ctaflow.com/">Brian
 					Gardner</a></p>
 			<!-- /wp:paragraph -->
 		</div>
