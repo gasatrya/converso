@@ -1,24 +1,22 @@
-=== Converso ===
-Contributors: gasatrya
+== Converso ==
+
+Contributors: 
 Requires at least: 6.8
 Tested up to: 6.8
-Requires PHP: 7.2
-Stable tag: 1.0.0
-License: GNU General Public License v3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Requires PHP: 5.7
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-== Description ==
 
-Converso embraces its minimalist roots with clarity and balance. Optimized for the WordPress block editor, it features an extensive pattern library, versatile templates, and tailored color palettes—empowering designers and developers to create stunning websites.
+== Changelog ==
 
-== Community ==
+= 1.0.0 =
+* Initial release
 
-For WordPress designers and developers using the Converso block theme. Share tips, find tutorials, and learn how to build stunning, high-performance websites.
-Join the community: https://www.reddit.com/r/ConversoTheme/
 
 == Copyright ==
 
-Converso WordPress theme, (C) 2006-2025 Ga Satrya.
+Converso WordPress Theme, (C) 2025 
 Converso is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -31,38 +29,3 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
----
-
-Credits: This theme is part of the Converso package, created by Brian Gardner and released under the GNU General Public License v3. For more information, visit https://www.ctaflow.com/converso/
-
-== Font ==
-
-The included font is licensed under the SIL Open Font License, Version 1.1.
-License URL: https://scripts.sil.org/OFL
-
-Outfit Font
-
-== Sample Images ==
-
-The following images are self-designed and declared under GPL License, Version 3.0.
-License URL: https://www.gnu.org/licenses/gpl-3.0.html
-
-sample-avatar-dark.svg
-sample-avatar-light.svg
-sample-image-dark.svg
-sample-image-light.svg
-sample-logo-dark.svg
-sample-logo-light.svg
-site-logo-dark.svg
-site-logo-light.svg
-
-== Sample Icons ==
-
-The following icons are available through Google Material Icons and declared under Apache Open Source License, Version 2.0.
-License URL: https://www.apache.org/licenses/LICENSE-2.0
-
-icon-circle-bolt.svg
-icon-circle-check.svg
-icon-circle-x.svg
-icon-quote-bottom.svg
-icon-quote-top.svg
